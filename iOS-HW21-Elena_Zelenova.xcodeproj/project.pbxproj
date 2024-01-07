@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79510B742B4AF32D00B436EE /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79510B732B4AF32D00B436EE /* MainModel.swift */; };
+		79510B762B4AF34600B436EE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79510B752B4AF34600B436EE /* MainView.swift */; };
+		79510B782B4AF3BC00B436EE /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79510B772B4AF3BC00B436EE /* DetailController.swift */; };
+		79510B7A2B4AF3CF00B436EE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79510B792B4AF3CF00B436EE /* DetailView.swift */; };
+		79510B7D2B4AF42300B436EE /* MarvelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79510B7C2B4AF42300B436EE /* MarvelCell.swift */; };
 		79BE57182B4AA5BA00843990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE57172B4AA5BA00843990 /* AppDelegate.swift */; };
 		79BE571A2B4AA5BA00843990 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE57192B4AA5BA00843990 /* SceneDelegate.swift */; };
-		79BE571C2B4AA5BA00843990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE571B2B4AA5BA00843990 /* ViewController.swift */; };
-		79BE571F2B4AA5BA00843990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BE571D2B4AA5BA00843990 /* Main.storyboard */; };
+		79BE571C2B4AA5BA00843990 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE571B2B4AA5BA00843990 /* MainController.swift */; };
 		79BE57212B4AA5BA00843990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79BE57202B4AA5BA00843990 /* Assets.xcassets */; };
 		79BE57242B4AA5BA00843990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BE57222B4AA5BA00843990 /* LaunchScreen.storyboard */; };
 		E96DA7C02F78C1C168106115 /* Pods_iOS_HW21_Elena_Zelenova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA30172A637B70827AC440B /* Pods_iOS_HW21_Elena_Zelenova.framework */; };
@@ -20,11 +24,15 @@
 		3F99B0232FDA87A29258032C /* Pods-iOS-HW21-Elena_Zelenova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-HW21-Elena_Zelenova.release.xcconfig"; path = "Target Support Files/Pods-iOS-HW21-Elena_Zelenova/Pods-iOS-HW21-Elena_Zelenova.release.xcconfig"; sourceTree = "<group>"; };
 		5BA30172A637B70827AC440B /* Pods_iOS_HW21_Elena_Zelenova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_HW21_Elena_Zelenova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B11C28F83A444C72610701 /* Pods-iOS-HW21-Elena_Zelenova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-HW21-Elena_Zelenova.debug.xcconfig"; path = "Target Support Files/Pods-iOS-HW21-Elena_Zelenova/Pods-iOS-HW21-Elena_Zelenova.debug.xcconfig"; sourceTree = "<group>"; };
+		79510B732B4AF32D00B436EE /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		79510B752B4AF34600B436EE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		79510B772B4AF3BC00B436EE /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		79510B792B4AF3CF00B436EE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		79510B7C2B4AF42300B436EE /* MarvelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCell.swift; sourceTree = "<group>"; };
 		79BE57142B4AA5BA00843990 /* iOS-HW21-Elena_Zelenova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-HW21-Elena_Zelenova.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BE57172B4AA5BA00843990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79BE57192B4AA5BA00843990 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		79BE571B2B4AA5BA00843990 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		79BE571E2B4AA5BA00843990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79BE571B2B4AA5BA00843990 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		79BE57202B4AA5BA00843990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79BE57232B4AA5BA00843990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79BE57252B4AA5BA00843990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +67,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		79510B722B4AF29E00B436EE /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				79510B732B4AF32D00B436EE /* MainModel.swift */,
+				79510B752B4AF34600B436EE /* MainView.swift */,
+				79BE571B2B4AA5BA00843990 /* MainController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		79510B7B2B4AF3DB00B436EE /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				79510B772B4AF3BC00B436EE /* DetailController.swift */,
+				79510B792B4AF3CF00B436EE /* DetailView.swift */,
+			);
+			path = DetailScreen;
+			sourceTree = "<group>";
+		};
+		79510B7E2B4AF42B00B436EE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				79510B7C2B4AF42300B436EE /* MarvelCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		79BE570B2B4AA5BA00843990 = {
 			isa = PBXGroup;
 			children = (
@@ -80,15 +115,48 @@
 		79BE57162B4AA5BA00843990 /* iOS-HW21-Elena_Zelenova */ = {
 			isa = PBXGroup;
 			children = (
-				79BE57172B4AA5BA00843990 /* AppDelegate.swift */,
-				79BE57192B4AA5BA00843990 /* SceneDelegate.swift */,
-				79BE571B2B4AA5BA00843990 /* ViewController.swift */,
-				79BE571D2B4AA5BA00843990 /* Main.storyboard */,
-				79BE57202B4AA5BA00843990 /* Assets.xcassets */,
-				79BE57222B4AA5BA00843990 /* LaunchScreen.storyboard */,
-				79BE57252B4AA5BA00843990 /* Info.plist */,
+				79BE572B2B4AA99600843990 /* App */,
+				79BE572E2B4AAB0200843990 /* Sources */,
+				79BE572C2B4AA9C800843990 /* Resources */,
+				79BE572D2B4AA9EB00843990 /* LaunchScreen */,
 			);
 			path = "iOS-HW21-Elena_Zelenova";
+			sourceTree = "<group>";
+		};
+		79BE572B2B4AA99600843990 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				79BE57172B4AA5BA00843990 /* AppDelegate.swift */,
+				79BE57192B4AA5BA00843990 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		79BE572C2B4AA9C800843990 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				79BE57202B4AA5BA00843990 /* Assets.xcassets */,
+				79BE57252B4AA5BA00843990 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		79BE572D2B4AA9EB00843990 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				79BE57222B4AA5BA00843990 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		79BE572E2B4AAB0200843990 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				79510B722B4AF29E00B436EE /* MainScreen */,
+				79510B7E2B4AF42B00B436EE /* Cell */,
+				79510B7B2B4AF3DB00B436EE /* DetailScreen */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +221,6 @@
 			files = (
 				79BE57242B4AA5BA00843990 /* LaunchScreen.storyboard in Resources */,
 				79BE57212B4AA5BA00843990 /* Assets.xcassets in Resources */,
-				79BE571F2B4AA5BA00843990 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79BE571C2B4AA5BA00843990 /* ViewController.swift in Sources */,
+				79510B742B4AF32D00B436EE /* MainModel.swift in Sources */,
+				79BE571C2B4AA5BA00843990 /* MainController.swift in Sources */,
+				79510B7D2B4AF42300B436EE /* MarvelCell.swift in Sources */,
 				79BE57182B4AA5BA00843990 /* AppDelegate.swift in Sources */,
+				79510B7A2B4AF3CF00B436EE /* DetailView.swift in Sources */,
+				79510B762B4AF34600B436EE /* MainView.swift in Sources */,
+				79510B782B4AF3BC00B436EE /* DetailController.swift in Sources */,
 				79BE571A2B4AA5BA00843990 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,14 +287,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		79BE571D2B4AA5BA00843990 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79BE571E2B4AA5BA00843990 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		79BE57222B4AA5BA00843990 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -358,10 +422,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 544C5YL5XT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS-HW21-Elena_Zelenova/Info.plist";
+				INFOPLIST_FILE = "iOS-HW21-Elena_Zelenova/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -387,10 +450,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 544C5YL5XT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS-HW21-Elena_Zelenova/Info.plist";
+				INFOPLIST_FILE = "iOS-HW21-Elena_Zelenova/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
