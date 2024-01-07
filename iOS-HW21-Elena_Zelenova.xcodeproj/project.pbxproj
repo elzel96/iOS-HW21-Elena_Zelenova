@@ -13,9 +13,13 @@
 		79BE571F2B4AA5BA00843990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BE571D2B4AA5BA00843990 /* Main.storyboard */; };
 		79BE57212B4AA5BA00843990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79BE57202B4AA5BA00843990 /* Assets.xcassets */; };
 		79BE57242B4AA5BA00843990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BE57222B4AA5BA00843990 /* LaunchScreen.storyboard */; };
+		E96DA7C02F78C1C168106115 /* Pods_iOS_HW21_Elena_Zelenova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA30172A637B70827AC440B /* Pods_iOS_HW21_Elena_Zelenova.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F99B0232FDA87A29258032C /* Pods-iOS-HW21-Elena_Zelenova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-HW21-Elena_Zelenova.release.xcconfig"; path = "Target Support Files/Pods-iOS-HW21-Elena_Zelenova/Pods-iOS-HW21-Elena_Zelenova.release.xcconfig"; sourceTree = "<group>"; };
+		5BA30172A637B70827AC440B /* Pods_iOS_HW21_Elena_Zelenova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_HW21_Elena_Zelenova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64B11C28F83A444C72610701 /* Pods-iOS-HW21-Elena_Zelenova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-HW21-Elena_Zelenova.debug.xcconfig"; path = "Target Support Files/Pods-iOS-HW21-Elena_Zelenova/Pods-iOS-HW21-Elena_Zelenova.debug.xcconfig"; sourceTree = "<group>"; };
 		79BE57142B4AA5BA00843990 /* iOS-HW21-Elena_Zelenova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-HW21-Elena_Zelenova.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BE57172B4AA5BA00843990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79BE57192B4AA5BA00843990 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96DA7C02F78C1C168106115 /* Pods_iOS_HW21_Elena_Zelenova.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E296D8F845CF74121E2C748 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64B11C28F83A444C72610701 /* Pods-iOS-HW21-Elena_Zelenova.debug.xcconfig */,
+				3F99B0232FDA87A29258032C /* Pods-iOS-HW21-Elena_Zelenova.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		75A14E06F36081B8F7B79F09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BA30172A637B70827AC440B /* Pods_iOS_HW21_Elena_Zelenova.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		79BE570B2B4AA5BA00843990 = {
 			isa = PBXGroup;
 			children = (
 				79BE57162B4AA5BA00843990 /* iOS-HW21-Elena_Zelenova */,
 				79BE57152B4AA5BA00843990 /* Products */,
+				4E296D8F845CF74121E2C748 /* Pods */,
+				75A14E06F36081B8F7B79F09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79BE57282B4AA5BA00843990 /* Build configuration list for PBXNativeTarget "iOS-HW21-Elena_Zelenova" */;
 			buildPhases = (
+				9DF25AC41B62F658F1F1A337 /* [CP] Check Pods Manifest.lock */,
 				79BE57102B4AA5BA00843990 /* Sources */,
 				79BE57112B4AA5BA00843990 /* Frameworks */,
 				79BE57122B4AA5BA00843990 /* Resources */,
+				1B1469848502FEE6F1DED848 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B1469848502FEE6F1DED848 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-HW21-Elena_Zelenova/Pods-iOS-HW21-Elena_Zelenova-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-HW21-Elena_Zelenova/Pods-iOS-HW21-Elena_Zelenova-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-HW21-Elena_Zelenova/Pods-iOS-HW21-Elena_Zelenova-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DF25AC41B62F658F1F1A337 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS-HW21-Elena_Zelenova-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79BE57102B4AA5BA00843990 /* Sources */ = {
@@ -282,6 +350,7 @@
 		};
 		79BE57292B4AA5BA00843990 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64B11C28F83A444C72610701 /* Pods-iOS-HW21-Elena_Zelenova.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +379,7 @@
 		};
 		79BE572A2B4AA5BA00843990 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F99B0232FDA87A29258032C /* Pods-iOS-HW21-Elena_Zelenova.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

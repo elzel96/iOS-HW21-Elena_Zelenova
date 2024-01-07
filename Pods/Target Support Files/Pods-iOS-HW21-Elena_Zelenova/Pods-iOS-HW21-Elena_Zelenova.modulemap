@@ -1,0 +1,6 @@
+framework module Pods_iOS_HW21_Elena_Zelenova {
+  umbrella header "Pods-iOS-HW21-Elena_Zelenova-umbrella.h"
+
+  export *
+  module * { export * }
+}
