@@ -13,6 +13,7 @@
 		79510B7A2B4AF3CF00B436EE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79510B792B4AF3CF00B436EE /* DetailView.swift */; };
 		79510B7D2B4AF42300B436EE /* MarvelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79510B7C2B4AF42300B436EE /* MarvelCell.swift */; };
 		79510B812B4C4C0A00B436EE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79510B802B4C4C0A00B436EE /* NetworkService.swift */; };
+		79510B842B4C571E00B436EE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79510B832B4C571E00B436EE /* String+Extension.swift */; };
 		79BE57182B4AA5BA00843990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE57172B4AA5BA00843990 /* AppDelegate.swift */; };
 		79BE571A2B4AA5BA00843990 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE57192B4AA5BA00843990 /* SceneDelegate.swift */; };
 		79BE571C2B4AA5BA00843990 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE571B2B4AA5BA00843990 /* MainController.swift */; };
@@ -31,6 +32,7 @@
 		79510B792B4AF3CF00B436EE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		79510B7C2B4AF42300B436EE /* MarvelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCell.swift; sourceTree = "<group>"; };
 		79510B802B4C4C0A00B436EE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		79510B832B4C571E00B436EE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		79BE57142B4AA5BA00843990 /* iOS-HW21-Elena_Zelenova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-HW21-Elena_Zelenova.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BE57172B4AA5BA00843990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79BE57192B4AA5BA00843990 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 			path = NetworkService;
 			sourceTree = "<group>";
 		};
+		79510B822B4C570000B436EE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				79510B832B4C571E00B436EE /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		79BE570B2B4AA5BA00843990 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 		79BE572E2B4AAB0200843990 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				79510B822B4C570000B436EE /* Extension */,
 				79510B7F2B4C4B1300B436EE /* NetworkService */,
 				79510B722B4AF29E00B436EE /* MainScreen */,
 				79510B7B2B4AF3DB00B436EE /* DetailScreen */,
@@ -292,6 +303,7 @@
 				79510B7A2B4AF3CF00B436EE /* DetailView.swift in Sources */,
 				79510B762B4AF34600B436EE /* MainView.swift in Sources */,
 				79510B782B4AF3BC00B436EE /* DetailController.swift in Sources */,
+				79510B842B4C571E00B436EE /* String+Extension.swift in Sources */,
 				79BE571A2B4AA5BA00843990 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

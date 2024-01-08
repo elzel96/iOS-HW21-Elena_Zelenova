@@ -3,7 +3,7 @@ import Alamofire
 
 class MainController: UIViewController {
     
-    private var model: [Character] = []
+    private var model: [Characters] = []
     
     private var mainView: MainView? {
         guard isViewLoaded else { return nil }
