@@ -73,6 +73,7 @@
 				79510B732B4AF32D00B436EE /* MainModel.swift */,
 				79510B752B4AF34600B436EE /* MainView.swift */,
 				79BE571B2B4AA5BA00843990 /* MainController.swift */,
+				79510B7E2B4AF42B00B436EE /* Cell */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -153,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				79510B722B4AF29E00B436EE /* MainScreen */,
-				79510B7E2B4AF42B00B436EE /* Cell */,
 				79510B7B2B4AF3DB00B436EE /* DetailScreen */,
 			);
 			path = Sources;
