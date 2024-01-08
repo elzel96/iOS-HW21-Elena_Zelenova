@@ -2,6 +2,22 @@ import UIKit
 
 class MarvelCell: UITableViewCell {
     
+    var model: Character? {
+        didSet {
+            nameLabel.text = model?.name
+            descriptionLabel.text = model?.description
+            
+            guard let imagePath = model?.imageURL,
+               let imageURL = URL(string: imagePath),
+            let imageData = try? Data(contentsOf: imageURL)
+            else {
+                image.image = UIImage(systemName: "person")
+                return
+            }
+            image.image = UIImage(data: imageData)
+        }
+    }
+    
     // MARK: - UI Elements
     
     private let image: UIImageView = {
