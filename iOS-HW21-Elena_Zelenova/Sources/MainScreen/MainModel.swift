@@ -9,15 +9,22 @@ struct Characters: Decodable {
 }
 
 struct Character: Decodable {
-    let id: Int?
     let name: String?
     let description: String?
-    let imageURL: String?
+    let thumbnail: Thumbnail?
     
     enum CodingKeys: String, CodingKey {
-       case id
        case name
        case description
-       case imageURL
+       case thumbnail
+    }
+}
+
+struct Thumbnail: Decodable {
+    var path: String?
+    var `extension`: String?
+    
+    func getImagePath() -> String {
+        (path ?? "") + "." + (`extension` ?? "")
     }
 }

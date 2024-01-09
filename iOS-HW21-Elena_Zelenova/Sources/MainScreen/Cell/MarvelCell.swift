@@ -7,7 +7,7 @@ class MarvelCell: UITableViewCell {
             nameLabel.text = model?.name
             descriptionLabel.text = model?.description
             
-            guard let imagePath = model?.imageURL,
+            guard let imagePath = model?.thumbnail?.getImagePath(),
                let imageURL = URL(string: imagePath),
             let imageData = try? Data(contentsOf: imageURL)
             else {
