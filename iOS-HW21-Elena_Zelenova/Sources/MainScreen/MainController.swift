@@ -5,10 +5,7 @@ class MainController: UIViewController {
     
     private var model: [Character] = []
     
-    private var mainView: MainView? {
-        guard isViewLoaded else { return nil }
-        return view as? MainView
-    }
+    private var mainView = MainView()
     
     // MARK: - Life Cycle
     
@@ -20,15 +17,16 @@ class MainController: UIViewController {
     // MARK: - Setups
     
     private func setupView() {
-        mainView?.backgroundColor = .systemBackground
-        mainView?.tableView.delegate = self
-        mainView?.tableView.dataSource = self
+        view = mainView
+        mainView.backgroundColor = .systemBackground
+        mainView.tableView.delegate = self
+        mainView.tableView.dataSource = self
         
         NetworkService.shared.fetchCharacter { data in
             self.model = data
             
             DispatchQueue.main.async{
-                self.mainView?.tableView.reloadData()
+                self.mainView.tableView.reloadData()
             }
         }
     }
@@ -54,9 +52,9 @@ extension MainController: UITableViewDataSource {
 
 extension MainController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = DetailController()
-        viewController.model = model[indexPath.row]
-        navigationController?.pushViewController(viewController, animated: true)
+//        let viewController = DetailController()
+//        viewController.model = model[indexPath.row]
+//        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

@@ -9,7 +9,7 @@ class NetworkService {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "gateway.marvel.com"
-        urlComponents.path = "/v1/public/characters"
+        urlComponents.path = "v1/public/characters"
         urlComponents.queryItems = [
             URLQueryItem(name: "ts", value: "\(ts)"),
             URLQueryItem(name: "apikey", value: publicKey),
