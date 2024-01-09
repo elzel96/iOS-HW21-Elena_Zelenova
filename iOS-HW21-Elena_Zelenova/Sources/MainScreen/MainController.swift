@@ -3,7 +3,7 @@ import Alamofire
 
 class MainController: UIViewController {
     
-    private var model: [Characters] = []
+    private var model: [Character] = []
     
     private var mainView: MainView? {
         guard isViewLoaded else { return nil }
@@ -16,13 +16,21 @@ class MainController: UIViewController {
         super.viewDidLoad()
         setupView()
     }
-
+    
     // MARK: - Setups
     
     private func setupView() {
         mainView?.backgroundColor = .systemBackground
         mainView?.tableView.delegate = self
         mainView?.tableView.dataSource = self
+        
+        NetworkService.shared.fetchCharacter { data in
+            self.model = data
+            
+            DispatchQueue.main.async{
+                self.mainView?.tableView.reloadData()
+            }
+        }
     }
 }
 
