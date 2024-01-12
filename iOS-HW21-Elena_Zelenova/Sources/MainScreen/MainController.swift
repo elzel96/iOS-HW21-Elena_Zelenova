@@ -1,9 +1,8 @@
 import UIKit
-import Alamofire
 
 class MainController: UIViewController {
     
-    private var model: [Character] = []
+    private var model: [Character]? = []
     
     private var mainView = MainView()
     
@@ -29,6 +28,7 @@ class MainController: UIViewController {
                 self.mainView.tableView.reloadData()
             }
         }
+        
     }
 }
 
@@ -36,12 +36,25 @@ class MainController: UIViewController {
 
 extension MainController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        model.count
+        model?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MarvelCell
-        cell?.model = model[indexPath.row]
+        if let cellModel = model?[indexPath.row] {
+            cell?.model = cellModel
+            
+//            if let imagePath = cellModel.thumbnail?.getImagePath() {
+//                NetworkService.shared.getImageData(path: imagePath) { imageData in
+//                    DispatchQueue.main.async{
+//                        cell?.image.image = UIImage(data: imageData)
+//                    }
+//                }
+//            } else {
+//                cell?.image.image = UIImage(systemName: "person")
+//            }
+            
+        }
         return cell ?? UITableViewCell()
     }
     
@@ -52,8 +65,9 @@ extension MainController: UITableViewDataSource {
 
 extension MainController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
 //        let viewController = DetailController()
-//        viewController.model = model[indexPath.row]
+//        viewController.model = model?[indexPath.row]
 //        navigationController?.pushViewController(viewController, animated: true)
     }
 }

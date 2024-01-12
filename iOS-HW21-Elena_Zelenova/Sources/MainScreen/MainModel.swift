@@ -1,23 +1,21 @@
 import Foundation
 
-struct CharacterDataContainer: Decodable {
-    let results: [Character]?
+struct CharacterDataWrapper: Decodable {
+    let data: CharacterDataContainer?
     
     enum CodingKeys: String, CodingKey {
-        case results
+        case data
     }
+}
+
+struct CharacterDataContainer: Decodable {
+    let results: [Character]?
 }
 
 struct Character: Decodable {
     let name: String?
     let description: String?
     let thumbnail: Image?
-    
-    enum CodingKeys: String, CodingKey {
-       case name
-       case description
-       case thumbnail
-    }
 }
 
 struct Image: Decodable {

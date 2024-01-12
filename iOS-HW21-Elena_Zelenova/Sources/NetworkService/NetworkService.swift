@@ -22,7 +22,7 @@ class NetworkService {
         return requestURL
     }
     
-    func fetchCharacter(complitionHadler: @escaping ([Character]) -> Void) {
+    func fetchCharacter(complitionHadler: @escaping ([Character]?) -> Void) {
         guard let url = makeRequestUrl() else { return }
         
         AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { response in
@@ -30,8 +30,8 @@ class NetworkService {
             case .success(let data):
                 do {
                     if let data = data {
-                        let jsonData = try JSONDecoder().decode(CharacterDataContainer.self, from: data)
-                        let result = jsonData.results
+                        let jsonData = try JSONDecoder().decode(CharacterDataWrapper.self, from: data)
+                        let result = jsonData.data?.results
                         if result != nil { complitionHadler(result!) }
                         }
                 } catch {
@@ -39,6 +39,16 @@ class NetworkService {
                 } case .failure(let error):
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    func getImageData(path: String?, complitionHadler: @escaping (Data) -> Void) {
+        guard let url = path else { return }
+        AF.download(url).responseData { response in
+            guard let image = response.value else {
+                return
+            }
+            complitionHadler(image)
         }
     }
 }

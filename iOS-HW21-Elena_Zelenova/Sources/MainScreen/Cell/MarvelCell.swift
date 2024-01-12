@@ -7,15 +7,21 @@ class MarvelCell: UITableViewCell {
             nameLabel.text = model?.name
             descriptionLabel.text = model?.description
             
-            guard let imagePath = model?.thumbnail?.getImagePath(),
-               let imageURL = URL(string: imagePath),
-            let imageData = try? Data(contentsOf: imageURL)
+            guard let imagePath = model?.thumbnail?.getImagePath()
             else {
                 image.image = UIImage(systemName: "person")
                 return
             }
-            image.image = UIImage(data: imageData)
+
+            NetworkService.shared.getImageData(path: imagePath) { imageData in
+
+                DispatchQueue.main.async{
+                    self.image.image = UIImage(data: imageData)
+                }
+
+            }
         }
+        
     }
     
     // MARK: - UI Elements

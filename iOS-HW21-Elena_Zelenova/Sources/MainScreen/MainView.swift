@@ -6,8 +6,6 @@ final class MainView: UIView {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
-//        tableView.backgroundColor = .secondarySystemBackground
-//        tableView.separatorStyle = .singleLine
         tableView.register(MarvelCell.self, forCellReuseIdentifier: "cell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
