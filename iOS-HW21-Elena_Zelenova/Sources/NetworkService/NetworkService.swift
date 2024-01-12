@@ -9,7 +9,7 @@ class NetworkService {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "gateway.marvel.com"
-        urlComponents.path = "v1/public/characters"
+        urlComponents.path = "/v1/public/characters"
         urlComponents.queryItems = [
             URLQueryItem(name: "ts", value: "\(ts)"),
             URLQueryItem(name: "apikey", value: publicKey),
@@ -30,8 +30,8 @@ class NetworkService {
             case .success(let data):
                 do {
                     if let data = data {
-                        let jsonData = try JSONDecoder().decode(Characters.self, from: data)
-                        let result = jsonData.characters
+                        let jsonData = try JSONDecoder().decode(CharacterDataContainer.self, from: data)
+                        let result = jsonData.results
                         complitionHadler(result)
                     }
                 } catch {
