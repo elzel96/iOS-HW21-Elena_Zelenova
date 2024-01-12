@@ -1,10 +1,10 @@
 import Foundation
 
-struct Characters: Decodable {
-    let characters: [Character]
+struct CharacterDataContainer: Decodable {
+    let results: [Character]
     
     enum CodingKeys: String, CodingKey {
-        case characters
+        case results
     }
 }
 
