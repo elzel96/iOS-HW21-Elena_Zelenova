@@ -1,7 +1,7 @@
 import Foundation
 
 struct CharacterDataContainer: Decodable {
-    let results: [Character]
+    let results: [Character]?
     
     enum CodingKeys: String, CodingKey {
         case results
@@ -11,7 +11,7 @@ struct CharacterDataContainer: Decodable {
 struct Character: Decodable {
     let name: String?
     let description: String?
-    let thumbnail: Thumbnail?
+    let thumbnail: Image?
     
     enum CodingKeys: String, CodingKey {
        case name
@@ -20,7 +20,7 @@ struct Character: Decodable {
     }
 }
 
-struct Thumbnail: Decodable {
+struct Image: Decodable {
     var path: String?
     var `extension`: String?
     

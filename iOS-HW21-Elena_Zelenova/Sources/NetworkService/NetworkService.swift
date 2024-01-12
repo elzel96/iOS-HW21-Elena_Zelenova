@@ -32,8 +32,8 @@ class NetworkService {
                     if let data = data {
                         let jsonData = try JSONDecoder().decode(CharacterDataContainer.self, from: data)
                         let result = jsonData.results
-                        complitionHadler(result)
-                    }
+                        if result != nil { complitionHadler(result!) }
+                        }
                 } catch {
                     print(error.localizedDescription)
                 } case .failure(let error):
