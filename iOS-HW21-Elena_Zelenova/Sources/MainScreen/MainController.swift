@@ -17,7 +17,7 @@ class MainController: UIViewController {
     
     private func setupView() {
         view = mainView
-        mainView.backgroundColor = .systemBackground
+        mainView.backgroundColor = .secondarySystemBackground
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
         
@@ -28,7 +28,6 @@ class MainController: UIViewController {
                 self.mainView.tableView.reloadData()
             }
         }
-        
     }
 }
 
@@ -43,17 +42,6 @@ extension MainController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MarvelCell
         if let cellModel = model?[indexPath.row] {
             cell?.model = cellModel
-            
-//            if let imagePath = cellModel.thumbnail?.getImagePath() {
-//                NetworkService.shared.getImageData(path: imagePath) { imageData in
-//                    DispatchQueue.main.async{
-//                        cell?.image.image = UIImage(data: imageData)
-//                    }
-//                }
-//            } else {
-//                cell?.image.image = UIImage(systemName: "person")
-//            }
-            
         }
         return cell ?? UITableViewCell()
     }
@@ -66,9 +54,11 @@ extension MainController: UITableViewDataSource {
 extension MainController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        let viewController = DetailController()
-//        viewController.model = model?[indexPath.row]
-//        navigationController?.pushViewController(viewController, animated: true)
+        let viewController = DetailController()
+        if let detailModel = model?[indexPath.row] {
+            viewController.detailView.model = detailModel
+        }
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
