@@ -18,10 +18,8 @@ class MarvelCell: UITableViewCell {
                 DispatchQueue.main.async{
                     self.image.image = UIImage(data: imageData)
                 }
-
             }
         }
-        
     }
     
     // MARK: - UI Elements
@@ -47,6 +45,7 @@ class MarvelCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = UIColor.black
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
