@@ -20,9 +20,35 @@ class MainController: UIViewController {
         mainView.backgroundColor = .secondarySystemBackground
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
+        mainView.searchButton.addTarget(self, action: #selector(search), for: .touchUpInside)
         
-        NetworkService.shared.fetchCharacter { data in
+        NetworkService.shared.fetchCharacter(nil) { data in
             self.model = data
+            
+            DispatchQueue.main.async{
+                self.mainView.tableView.reloadData()
+            }
+        }
+    }
+    
+    // MARK: - Actions
+    
+    private func showAlert() {
+        let alertController = UIAlertController(title: "Oh no...", message: "There are no such heroes in Marvel universe, try again!", preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        self.present(alertController, animated: true)
+    }
+    
+    @objc func search() {
+        NetworkService.shared.fetchCharacter(mainView.textField.text) { data in
+            self.model = data
+            
+            if self.model == nil {
+                DispatchQueue.main.async{
+                    self.showAlert()
+                }
+            }
             
             DispatchQueue.main.async{
                 self.mainView.tableView.reloadData()
@@ -59,6 +85,17 @@ extension MainController: UITableViewDelegate {
             viewController.detailView.model = detailModel
         }
         navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension MainController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        search()
+        DispatchQueue.main.async{
+            self.mainView.tableView.reloadData()
+        }
+        return true
     }
 }
 

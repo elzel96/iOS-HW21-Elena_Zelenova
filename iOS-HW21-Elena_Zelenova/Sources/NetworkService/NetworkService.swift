@@ -5,16 +5,25 @@ class NetworkService {
     
     static let shared = NetworkService()
     
-    func makeRequestUrl() -> URL? {
+    func makeRequestUrl(_ forName: String?) -> URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "gateway.marvel.com"
         urlComponents.path = "/v1/public/characters"
-        urlComponents.queryItems = [
-            URLQueryItem(name: "ts", value: "\(ts)"),
-            URLQueryItem(name: "apikey", value: publicKey),
-            URLQueryItem(name: "hash", value: hash)
-        ]
+        if let name = forName {
+            urlComponents.queryItems = [
+                URLQueryItem(name: "ts", value: "\(ts)"),
+                URLQueryItem(name: "apikey", value: publicKey),
+                URLQueryItem(name: "hash", value: hash),
+                URLQueryItem(name: "nameStartsWith", value: name)
+            ]
+        } else {
+            urlComponents.queryItems = [
+                URLQueryItem(name: "ts", value: "\(ts)"),
+                URLQueryItem(name: "apikey", value: publicKey),
+                URLQueryItem(name: "hash", value: hash)
+                ]
+        }
         
         guard let requestURL = urlComponents.url else {
             return nil
@@ -22,8 +31,8 @@ class NetworkService {
         return requestURL
     }
     
-    func fetchCharacter(complitionHadler: @escaping ([Character]?) -> Void) {
-        guard let url = makeRequestUrl() else { return }
+    func fetchCharacter(_ forName: String?, complitionHadler: @escaping ([Character]?) -> Void) {
+        guard let url = makeRequestUrl(forName) else { return }
         
         AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { response in
             switch response.result {
