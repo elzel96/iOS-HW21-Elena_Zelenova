@@ -44,7 +44,7 @@ class MainController: UIViewController {
         NetworkService.shared.fetchCharacter(mainView.textField.text) { data in
             self.model = data
             
-            if self.model == nil {
+            if self.model?.isEmpty == true {
                 DispatchQueue.main.async{
                     self.showAlert()
                 }
