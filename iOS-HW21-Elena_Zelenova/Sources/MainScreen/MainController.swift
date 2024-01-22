@@ -21,6 +21,7 @@ class MainController: UIViewController {
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
         mainView.searchButton.addTarget(self, action: #selector(search), for: .touchUpInside)
+        mainView.textField.addTarget(self, action: #selector(textFieldDidClear), for: .editingChanged)
         
         NetworkService.shared.fetchCharacter(nil) { data in
             self.model = data
@@ -44,7 +45,7 @@ class MainController: UIViewController {
         NetworkService.shared.fetchCharacter(mainView.textField.text) { data in
             self.model = data
             
-            if self.model == nil {
+            if self.model?.isEmpty == true {
                 DispatchQueue.main.async{
                     self.showAlert()
                 }
@@ -52,6 +53,18 @@ class MainController: UIViewController {
             
             DispatchQueue.main.async{
                 self.mainView.tableView.reloadData()
+            }
+        }
+    }
+    
+    @objc func textFieldDidClear()  {
+        if mainView.textField.text?.isEmpty == true {
+            NetworkService.shared.fetchCharacter(nil) { data in
+                self.model = data
+                
+                DispatchQueue.main.async{
+                    self.mainView.tableView.reloadData()
+                }
             }
         }
     }
